@@ -10,8 +10,8 @@ import javafx.scene.layout.VBox;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
-
-public class WeatherVisualizer {
+//Observer
+public class WeatherVisualizer implements WeatherDataObserver{
     private XYChart.Series<Number, Number> temperatureSeries;
     private LineChart<Number, Number> lineChart;
     private NumberAxis xAxis;
@@ -107,6 +107,7 @@ public class WeatherVisualizer {
     public VBox getRoot() {
         return root;
     }
+
 
 
 }

@@ -4,8 +4,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.Random;
-
-public class WeatherDataSimulator {
+//Subject
+public class WeatherDataSimulator{
 
     private WeatherVisualizer visualizer;
     private Random random;

@@ -1,3 +1,4 @@
 public interface WeatherDataObserver {
-    void update(WeatherData weatherData);
+    //Observer interface
+    void updateWeatherVisualization(WeatherData weatherData);
 }

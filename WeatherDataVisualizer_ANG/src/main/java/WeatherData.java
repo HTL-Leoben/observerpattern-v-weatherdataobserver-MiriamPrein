@@ -1,6 +1,13 @@
 import java.time.LocalDateTime;
 
 public interface WeatherData {
+//Subject Interface
+    void registerO(WeatherDataObserver observer);
+
+    void removeO(WeatherDataObserver observer);
+
+    void notifyO();
+
     /**
      * Gibt die aktuelle Temperatur zurück
      * @return Temperatur in Grad Celsius
