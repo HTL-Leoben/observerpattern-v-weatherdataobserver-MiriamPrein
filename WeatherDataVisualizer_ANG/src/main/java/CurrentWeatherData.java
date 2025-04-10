@@ -8,8 +8,7 @@ public class CurrentWeatherData implements WeatherData {
     private int rainProbability;
     private WeatherCondition currentCondition;
     private LocalDateTime timestamp;
-    private List<WeatherDataObserver> observerList = new ArrayList<>();
-    private WeatherDataObserver observer;
+
 
     public CurrentWeatherData(double temperature, int rainProbability, WeatherCondition currentCondition, LocalDateTime timestamp) {
         this.temperature = temperature;
@@ -24,23 +23,6 @@ public class CurrentWeatherData implements WeatherData {
         this.rainProbability = rainProbability;
         this.currentCondition = currentCondition;
         this.timestamp = LocalDateTime.now();
-    }
-
-    @Override
-    public void registerO(WeatherDataObserver observer) {
-        observerList.add(observer);
-    }
-
-    @Override
-    public void removeO(WeatherDataObserver observer) {
-        observerList.remove(observer);
-    }
-
-    @Override
-    public void notifyO() {
-        for (WeatherDataObserver observer : observerList) {
-            observer.updateWeatherVisualization(this);
-        }
     }
 
     @Override

@@ -74,6 +74,11 @@ public class WeatherVisualizer implements WeatherDataObserver{
         root = new VBox(10, lineChart, temperatureLabel, conditionLabel, timeLabel, weatherIconView);
     }
 
+    @Override
+    public void update(WeatherData weatherData) {
+        updateWeatherVisualization(weatherData);
+    }
+
     public void updateWeatherVisualization(WeatherData weatherData) {
         Platform.runLater(() -> {
             dataPointCounter++;
@@ -107,7 +112,5 @@ public class WeatherVisualizer implements WeatherDataObserver{
     public VBox getRoot() {
         return root;
     }
-
-
 
 }
